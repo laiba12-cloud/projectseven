@@ -18,6 +18,7 @@ class FacebookScreen extends StatelessWidget {
                 radius:30,
                 backgroundImage: AssetImage('assets/awesome.jpg'),
               ),
+              Text('byeee',),
             ],
           ),
         ],
