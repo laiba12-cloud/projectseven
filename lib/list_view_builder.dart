@@ -10,7 +10,7 @@ class ListBuilder extends StatefulWidget {
 class _ListBuilderState extends State<ListBuilder> {
   // static data base
  List <String> userName=[
-   'Abc',// 0 -->>>cout<<userName[i]
+   'Abc',// 0 <userName[i]
    'Abc1',//1
    'Abc2',//2
    'Abc3',//3
@@ -23,7 +23,7 @@ class _ListBuilderState extends State<ListBuilder> {
    'Abc4',
    'Abc5',
  ];
-List <String>subTitile=[
+List <String>subTitle=[
   'text-1',
   'text-2',
   'text-3',
@@ -68,6 +68,7 @@ List<String> images=[
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView.builder(
 
         itemCount: userName.length,
@@ -76,7 +77,7 @@ List<String> images=[
             leading: CircleAvatar(backgroundImage: AssetImage(images[i]),),
             // for(int i=0;i<=11;i++){cout<<ar[i]}
             title: Text('${userName[i]}'),
-            subtitle: Text('${subTitile[i]}'),
+            subtitle: Text('${subTitle[i]}'),
             trailing: Text(time[i]),
           );
         },
