@@ -7,10 +7,34 @@ class InstagramFront extends StatefulWidget {
 }
 
 class _InstagramFrontState extends State<InstagramFront> {
+  List images=[
+    'assets/awesome.jpg',
+    'assets/beutifull.jpg',
+    'assets/girl.jpg',
+    'assets/girl2.jpg',
+    'assets/girl3.jpg',
+    'assets/girl5.jpg',
+    'assets/girl6.jpg',
+    'assets/girl8.jpg',
+    'assets/hijab.jpg',
+    'assets/pictwo.jpg'
+  ];
+  List messages=[
+    'your story',
+    'zartasha',
+    'amna',
+    'laiba',
+    'mehwish',
+    'zarnab',
+    'maliha',
+    'ayesha',
+    'mirha',
+    'emaan'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar:AppBar(
         backgroundColor: Colors.black,
        title:Text('Instagram',style:TextStyle(
@@ -20,42 +44,40 @@ class _InstagramFrontState extends State<InstagramFront> {
        )),
         centerTitle: false,
           actions:[
-            Icon(Icons.favorite_outline_rounded,color: Colors.white,),
+            Icon(Icons.favorite_outline_rounded,color: Colors.white,size:30),
+            SizedBox(width:20),
+            Icon(Icons.messenger_rounded,color:Colors.white,size:30),
             SizedBox(width:15),
-            Icon(Icons.messenger_rounded,color:Colors.white,),
           ],
       ),
-      body:Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          ListView.builder(
-            itemCount:10,
-            itemBuilder:(context,index){
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children:
-                  [
-                    CircleAvatar(
-                      radius:30,
+      body: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount:messages.length,
+        itemBuilder:(context,index){
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children:
+              [
+                SizedBox(height:5),
+                CircleAvatar(
+                  radius:40,
+                  backgroundColor: Colors.black,
+                    child:CircleAvatar(
+                      radius:36,
                       backgroundColor: Colors.white,
-                        child:CircleAvatar(
-                          radius:25,
-                          child:CircleAvatar(
-                            radius:20,
-                            backgroundImage: AssetImage('assets/awesome.jpg'),
-                          ),
-                        ),
+                      child:CircleAvatar(
+                        radius:32,
+                        backgroundImage: AssetImage(images[index]),
+                      ),
                     ),
-                    Spacer(),
-                    Text('Your Story',style:TextStyle(
-                      color:Colors.black,
-                      fontWeight:FontWeight.bold,
-                    ),),
-                  ]
-              );
-              }
-          ),
-        ],
+                ),
+                Text('${messages[index]}',style:TextStyle(
+                  color:Colors.black,
+                  fontWeight:FontWeight.bold,
+                ),),
+              ]
+          );
+          }
       )
     );
   }
