@@ -8,6 +8,7 @@ import 'package:projectseven/instagram%20front.dart';
 import 'package:projectseven/instagram2.dart';
 import 'package:projectseven/list_view_builder.dart';
 import 'package:projectseven/multiply%20function.dart';
+import 'package:projectseven/navigation%20of%20screens.dart';
 import 'package:projectseven/subtract%20function.dart';
 import 'package:projectseven/swap%20without%203rd.dart';
 import 'package:projectseven/whatsapp%20by%20listviewbuilder.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-  home:InstagramFront()
+  home:ParentClass()
+      //InstagramFront()
       //ListClass()
       //InstagramFront()
       //WhatsAppListView()
