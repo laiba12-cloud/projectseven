@@ -112,7 +112,7 @@ class _InstagramFrontState extends State<InstagramFront> {
                 CircleAvatar(
                   radius:15,
                   backgroundImage: AssetImage('assets/awesome.jpg'),
-                )
+                ),
               ],
             )
           )
