@@ -11,7 +11,7 @@ class ChildClass extends StatelessWidget {
     return Scaffold(
 
     appBar:AppBar(
-    leading:Icon(Icons.arrow_back,color:Colors.white),
+    leading:Icon(Icons.arrow_back,color:Colors.black),
     title:Row(children:[
     CircleAvatar(radius:20,backgroundImage: AssetImage(images),),
     Text(names),

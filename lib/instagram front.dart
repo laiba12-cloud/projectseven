@@ -58,28 +58,32 @@ class _InstagramFrontState extends State<InstagramFront> {
             scrollDirection: Axis.horizontal,
             itemCount:messages.length,
             itemBuilder:(context,index){
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children:
-                  [
-                    SizedBox(height:5),
-                    CircleAvatar(
-                      radius:40,
-                      backgroundColor: Colors.white,
-                        child:CircleAvatar(
-                          radius:36,
-                          backgroundColor: Colors.black,
+              return Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children:
+                    [
+                      SizedBox(height:5),
+                      CircleAvatar(
+                        radius:30,
+                        backgroundColor: Colors.white,
                           child:CircleAvatar(
-                            radius:32,
-                            backgroundImage: AssetImage(images[index]),
+                            radius:26,
+                            backgroundColor: Colors.black,
+                            child:CircleAvatar(
+                              radius:20,
+                              backgroundImage: AssetImage(images[index]),
+                            ),
                           ),
-                        ),
-                    ),
-                    Text('${messages[index]}',style:TextStyle(
-                      color:Colors.white,
-                      fontWeight:FontWeight.bold,
-                    ),),
-                  ]
+                      ),
+                      Text('${messages[index]}',style:TextStyle(
+                        color:Colors.white,
+                        fontWeight:FontWeight.bold,
+                        fontSize:15,
+                      ),),
+                    ]
+                ),
               );
               }
           ),
@@ -88,16 +92,16 @@ class _InstagramFrontState extends State<InstagramFront> {
             flex:70,
             child:SingleChildScrollView(
               scrollDirection:Axis.horizontal,
-              child:Container(
-              height:500,
-              width:300,
-              decoration:BoxDecoration(
-                  color:Colors.pink,
-                  borderRadius:BorderRadius.circular(20),
-                border:Border.all(width:5,color:Colors.white,),
-                image: DecorationImage(image: AssetImage('assets/girl8.jpg'),
-                fit:BoxFit.cover)
-              )),
+              child: Container(
+                height:500,
+                width:600,
+                decoration:BoxDecoration(
+                    color:Colors.pink,
+                    borderRadius:BorderRadius.circular(20),
+                  border:Border.all(width:5,color:Colors.white,),
+                  image: DecorationImage(image: AssetImage('assets/girl8.jpg'),
+                  fit:BoxFit.cover)
+                )),
             ),
           ),
           Expanded(
