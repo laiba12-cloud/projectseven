@@ -7,11 +7,13 @@ import 'package:projectseven/facebook%20screen.dart';
 import 'package:projectseven/instagram%20front.dart';
 import 'package:projectseven/instagram2.dart';
 import 'package:projectseven/list_view_builder.dart';
+import 'package:projectseven/multiple%20ternary%20operator.dart';
 import 'package:projectseven/multiply%20function.dart';
 import 'package:projectseven/navigation%20of%20screens.dart';
 import 'package:projectseven/splash%20screen.dart';
 import 'package:projectseven/subtract%20function.dart';
 import 'package:projectseven/swap%20without%203rd.dart';
+import 'package:projectseven/ternary%20operator.dart';
 import 'package:projectseven/whatsapp%20by%20listviewbuilder.dart';
 
 void main() {
@@ -26,7 +28,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-  home:SplashScreen()
+  home:TernaryMultiple()
+      //TernaryClass()
+      //SplashScreen()
   //ParentClass()
       //InstagramFront()
       //ListClass()
